@@ -4,87 +4,9 @@
          "matchId": 1,
          "winner": "win",
          "matchName": "ERANGEL",
-         "date": "2022/10/21",
-         "time": "20:41",
-         "teams": [
-            {
-               "team": "blue",
-               "participants": [
-                  {
-                     "player1": [
-                        {
-                           "name": "TGLTN",
-                           "kills": 40,
-                           "deaths": 35
-                        }
-                     ]
-                     
-                  }
-               ]
-            },
-            {
-               "team": "red",
-               "participants": [
-                  {
-                     "player1": [
-                        {
-                           "name": "SHRIMZY",
-                           "kills": 35,
-                           "deaths": 40
-                        }
-                     ]
-                    
-                    
-                    
-                  }
-               ]
-            }
-
-         ]
-      },
-      {
-         "matchId": 2,
-         "winner": "win",
-         "matchName": "ERANGEL",
-         "date": "2022/10/21",
-         "time": "20:41",
-         "teams": [
-            {
-               "team": "blue",
-               "participants": [
-                  {
-                     "player1": [
-                        {
-                           "name": "HWINN",
-                           "kills": 42,
-                           "deaths": 35
-                        }
-                     ]
-                     
-                  }
-               ]
-            },
-            {
-               "team": "red",
-               "participants": [
-                  {
-                     "player1": [
-                        {
-                           "name": "M1ME",
-                           "kills": 35,
-                           "deaths": 40
-                        }
-                     ]
-                    
-                    
-                    
-                  }
-               ]
-            }
-
-         ]
-      }
-
-
-   ]
-}
+         "playerOne": "Phawkman",
+         "playerTwo": "TGLTN"
+      }]
+   
+   }
+         

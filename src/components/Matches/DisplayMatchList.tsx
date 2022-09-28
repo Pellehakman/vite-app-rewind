@@ -9,45 +9,22 @@ import jsonData from '../../data/data.json'
 
 
 
-console.log(jsonData)
 
 
 
-export default function DisplayMatchList(){
-   
-    const LOCAL_STORAGE_KEY = 'matches';
+
+function DisplayMatchList(){
+    const [tasks, setTasks] = useState([])
 
 
-    const [tasks, setTasks] = useState([]);
 
+    function onAddMatch(matchName){
+        ...tasks,
+        {
+            title: matchName
 
-    function loadSavedTasks() {
-        const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
-        if(saved) {
-          setTasks(JSON.parse(saved));
-        }
-        console.log(saved)
-      }
-    
-    
-    function setSavedMatches(){
-        if (localStorage.length > 0){
-        }else{
-        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(jsonData));
-        }
+        } 
     }
-
-    
-    
-    useEffect(() => {
-        loadSavedTasks();
-      }, [])
-
-
-
-
-
-
 
 
 
@@ -65,8 +42,11 @@ return(
                     <header>MATCHES</header>
                     <button onClick={handleAddMatch} className='add-btn'>ADD MATCH</button>
                 </div>
-                {overlay && <AddMatch />}
+               
+                {overlay && <AddMatch onAddMatch={onAddMatch} />}
                 {/*{matches.map(match => ( <SmallCard key={match.matchId} match={match} /> ))} */}
+
+                
             </section>
             
             <section className='stats-container'>
@@ -76,3 +56,5 @@ return(
         </div>
     )
 }
+
+export default DisplayMatchList

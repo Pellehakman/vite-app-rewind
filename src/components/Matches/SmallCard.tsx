@@ -25,7 +25,7 @@ const handleOverlay:  () => void = () => {
 
 return(<>
 
-    <section className="match" key={match.matchId} >
+    {/* <section className="match" key={match.matchId} >
     {hide &&
         <div className='small-overlay'>
             <div className='match-date-container'>
@@ -44,7 +44,7 @@ return(<>
 
 
     
-    </section>
+    </section> */}
     <button onClick={handleOverlay}>OPEN/CLOSE</button>
        
     </>)

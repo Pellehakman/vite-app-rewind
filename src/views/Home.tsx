@@ -1,4 +1,4 @@
-import DisplayMatchlist from '../components/Match-Grid/DisplayMatchList'
+import DisplayMatchlist from '../components/Matches/DisplayMatchList'
 
 import '../styles/home.scss'
 

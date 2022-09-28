@@ -1,12 +1,8 @@
 export interface Match {
-    matchName: string;
+    matchId: number; 
     winner: string;
-    date: string;
-    time: string;
-    matchId: number;  
-    teams: any;
-    team: any;
-    participants: any;
-    
+    matchName: string;
+    playerOne: string,
+    playerTwo: string   
 };
 

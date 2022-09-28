@@ -6,24 +6,24 @@ interface BigCardProps{
 }
 const BigCard = ({ match }: BigCardProps) => {
     
-    const handlePlayer:  () => void = () => {
-        console.log('you clicked', playerOne)
+    // const handlePlayer:  () => void = () => {
+    //     console.log('you clicked', playerOne)
        
-    }
+    // }
 
 // --------------- TEAM ONE START --------------- //
 
-const teamOne = match.teams[0].team
-const playerOne = match.teams[0].participants[0].player1[0] 
+// const teamOne = match.teams[0].team
+// const playerOne = match.teams[0].participants[0].player1[0] 
 
 
 
 
 
-// --------------- TEAM TWO START --------------- //
+// // --------------- TEAM TWO START --------------- //
 
-const teamTwo = match.teams[1].team
-const playerTwo = match.teams[1].participants[0].player1[0] 
+// const teamTwo = match.teams[1].team
+// const playerTwo = match.teams[1].participants[0].player1[0] 
 
 
 
@@ -32,7 +32,7 @@ const playerTwo = match.teams[1].participants[0].player1[0]
 
     return (
         <section className='big-match-card-container' >
-            <div>
+            {/* <div>
             <p>{match.matchName}</p>
             <h1>
                 {teamOne}
@@ -52,7 +52,7 @@ const playerTwo = match.teams[1].participants[0].player1[0]
             <h2>/{playerTwo.kills}</h2>
             <h2>/{playerTwo.deaths}</h2>
                 
-            </div>
+            </div> */}
             </section>
     )
 };
