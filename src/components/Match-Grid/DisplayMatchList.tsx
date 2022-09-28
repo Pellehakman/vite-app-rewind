@@ -6,26 +6,22 @@ import SmallCard from './SmallCard'
 import { useState, useEffect } from 'react'
 import AddMatch from '../AddMatch'
 import jsonData from '../../data/data.json'
+import {Match} from '../../models/data'
 
 
 
 
+interface Props{
+    match: Match
+    
+}
 
 
 
 function DisplayMatchList(){
     const [tasks, setTasks] = useState([])
 
-
-
-    function onAddMatch(matchName){
-        ...tasks,
-        {
-            title: matchName
-
-        } 
-    }
-
+   
 
 
 const [overlay, setOverlay] = useState<boolean>(false);
@@ -43,7 +39,7 @@ return(
                     <button onClick={handleAddMatch} className='add-btn'>ADD MATCH</button>
                 </div>
                
-                {overlay && <AddMatch onAddMatch={onAddMatch} />}
+                {overlay && <AddMatch />}
                 {/*{matches.map(match => ( <SmallCard key={match.matchId} match={match} /> ))} */}
 
                 

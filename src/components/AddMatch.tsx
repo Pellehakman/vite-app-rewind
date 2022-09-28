@@ -1,31 +1,31 @@
 import '../styles/AddMatch.scss'
-
 import {Match} from '../models/data'
-import {useState} from 'react'
-
+import {useState, useEffect} from 'react'
+const LOCAL_STORAGE_KEY = 'Match';
 
 interface Props{
-    match: Match
-    onAddMatch: any
+    match: Match  
 }
 
-const AddMatch = ({ match, onAddMatch }: Props) => {
+function AddMatch(){
+ 
 
 
     const [newMatch, setNewMatch] = useState<Match>({matchName: '', winner: '', playerOne: '', playerTwo: '', matchId: 0});
-    console.log(newMatch)
-        
-       
+
+   
     const handleFormInput: (e:any) => void = (e:any) => {
         const {name, value } = e.target;
-        setNewMatch((prevUser: Match) => ({...prevUser,[name]: value}));   
+        setNewMatch((prevUser: Match) => ({...prevUser, [name]: value}));   
+        
     };
 
     const handleSubmit: (e:any) => void = (e:any) => {
         e.preventDefault()
+       
         
         setNewMatch((prevUser: Match) => ({...prevUser, matchId: Math.floor(Math.random() * 1000)})); 
-        onAddMatch(newMatch)
+       
         
     };
 
@@ -33,7 +33,7 @@ const AddMatch = ({ match, onAddMatch }: Props) => {
 
 
 
-    return (
+    return (<>
         <form className='add-match-container' onClick={handleSubmit}>
 
                 <div className="input-container">
@@ -51,7 +51,10 @@ const AddMatch = ({ match, onAddMatch }: Props) => {
 
                     <label htmlFor="playerTwo">Player Two</label>
                     <input type="text" id='playerTwo' name='matchNplayerTwoame' required onChange={(e) => handleFormInput(e)}/>
+                    
 
+
+                
                     
                 </div>
 
@@ -60,7 +63,10 @@ const AddMatch = ({ match, onAddMatch }: Props) => {
         
 
         </form>
-       
+        <div>
+      {newMatch.matchName}
+        </div>
+        </>
     )
     
   
