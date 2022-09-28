@@ -23,17 +23,15 @@ const handleOverlay:  () => void = () => {
    
 }
 
-return(<>
+return(
 
-    {/* <section className="match" key={match.matchId} >
+    <section className="match" key={match.matchId} >
     {hide &&
         <div className='small-overlay'>
             <div className='match-date-container'>
-                <p> {match.date} </p>
-                <p> {match.time} </p>
+               
             </div>
-                <p> {match.matchName} </p>
-                <p> {match.winner} </p>
+               
             
         </div>
     }
@@ -44,10 +42,10 @@ return(<>
 
 
     
-    </section> */}
-    <button onClick={handleOverlay}>OPEN/CLOSE</button>
+    </section>
+    
        
-    </>)
+   )
 }
 
 export default SmallCard

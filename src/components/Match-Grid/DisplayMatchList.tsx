@@ -4,25 +4,30 @@ import SmallCard from './SmallCard'
 
 
 import { useState, useEffect } from 'react'
-import AddMatch from '../AddMatch'
+import AddMatch from './AddMatch/AddMatch'
 import jsonData from '../../data/data.json'
-import {Match} from '../../models/data'
+import {Match, Task, TaskProps} from '../../models/data'
+import { nanoid } from 'nanoid'
 
 
 
-
-interface Props{
-    match: Match
-    
-}
-
+type Props = TaskProps
 
 
 function DisplayMatchList(){
-    const [tasks, setTasks] = useState([])
 
-   
+    const [tasks, setTasks] = useState<Task[]>([])
+    const TaskProps = {tasks, setTasks}
+    const [newTaskLabel, setNewTaskLabel] = useState('')
+    console.log(newTaskLabel)
+ 
 
+
+const handleTaskDeleteClick = (handledTask: Task) => () => {
+    setTasks((tasks) => tasks.filter((task) => task.id !== handledTask.id))
+
+
+}
 
 const [overlay, setOverlay] = useState<boolean>(false);
 
@@ -38,9 +43,22 @@ return(
                     <header>MATCHES</header>
                     <button onClick={handleAddMatch} className='add-btn'>ADD MATCH</button>
                 </div>
-               
-                {overlay && <AddMatch />}
-                {/*{matches.map(match => ( <SmallCard key={match.matchId} match={match} /> ))} */}
+                {overlay && <AddMatch {...TaskProps}  />}
+
+           
+
+               {tasks.map((task) => (
+                <div key={task.id}>
+            
+              
+            
+           
+            {task.label}
+            
+            <button onClick={handleTaskDeleteClick(task)}>RADERA</button>
+              
+          </div>
+        ))}
 
                 
             </section>

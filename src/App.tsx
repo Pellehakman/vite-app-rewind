@@ -5,20 +5,15 @@ import Home from './views/Home'
 import Footer from './components/Footer'
 const LOCAL_STORAGE_KEY = 'Match';
 import jsonData from './data/data.json'
+import { useState } from 'react'
 
+import { Task } from './models/data'
 
 
 
 
 function App() {
 
-  if (localStorage.length > 0){
-    //Items are stored in local storage
-}else{
-  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(jsonData));
-}
-
-  
 
 
   return (
