@@ -1,0 +1,16 @@
+{
+    "players": [
+        {
+            "player": "TGLTN",
+            "wins": 19,
+            "losses": 2,
+            "kills": 429,
+            "deaths": 241,
+            
+            "playerId": 1
+        }
+        
+        
+    ]
+   
+}

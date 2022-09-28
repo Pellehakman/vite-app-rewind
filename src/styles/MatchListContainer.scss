@@ -1,0 +1,55 @@
+@use 'variables';
+
+.matchlist-container{
+    @include variables.flexContainer(row);
+    height: 90%;
+    width: 60%;
+    background-color: azure;
+    
+
+    
+    
+}
+
+.matches-container{
+    
+    flex: 2;
+    background-color: rgb(143, 96, 96);
+    
+    
+}
+
+.stats-container{
+    flex: 1;
+    background-color: rgb(118, 36, 36);
+}
+
+.header-container{
+    @include variables.flexContainer(row);
+    @include variables.headerFont();
+    @include variables.columnSize();
+    
+    justify-content: space-between;
+    
+    background-color: variables.$black-bg;
+}
+
+.alltime-header{
+    height: 3rem;
+    background-color: variables.$black-bg;
+    @include variables.headerFont();
+    @include variables.flexContainer();
+    @include variables.columnSize();
+    justify-content: center;
+}
+.add-btn{
+    @include variables.addBtn();
+}
+
+@media screen and (max-width:768px) {
+    .matchlist-container{
+        width: 100%;
+    }
+    
+    
+}

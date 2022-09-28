@@ -1,0 +1,23 @@
+@use 'variables';
+
+.match{
+    @include variables.flexContainer(row);
+    justify-content: space-between;
+    align-items: center;
+    background-color: variables.$white-bg;
+
+    
+    margin-bottom: 1rem
+    
+    
+}
+
+.match-date-container{
+    @include variables.flexContainer();
+    align-items: center;
+
+}
+
+.small-overlay{
+    @include variables.flexContainer(row);
+}

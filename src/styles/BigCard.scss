@@ -1,0 +1,10 @@
+@use 'variables';
+
+.big-match-card-container{
+    @include variables.flexContainer(row);
+
+    
+    height: 10rem;
+    width: 100%;
+    background-color: rgb(14, 189, 14);
+}
